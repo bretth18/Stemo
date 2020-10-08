@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8283AF6252FA725007828DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283AF5252FA725007828DF /* AppDelegate.swift */; };
+		D8283AF8252FA725007828DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283AF7252FA725007828DF /* ContentView.swift */; };
+		D8283AFA252FA726007828DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8283AF9252FA726007828DF /* Assets.xcassets */; };
+		D8283AFD252FA726007828DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8283AFC252FA726007828DF /* Preview Assets.xcassets */; };
+		D8283B00252FA726007828DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8283AFE252FA726007828DF /* Main.storyboard */; };
+		D8283B0C252FA726007828DF /* StemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B0B252FA726007828DF /* StemoTests.swift */; };
+		D8283B17252FA726007828DF /* StemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B16252FA726007828DF /* StemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8283B08252FA726007828DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8283AEA252FA725007828DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8283AF1252FA725007828DF;
+			remoteInfo = Stemo;
+		};
+		D8283B13252FA726007828DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8283AEA252FA725007828DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8283AF1252FA725007828DF;
+			remoteInfo = Stemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8283AF2252FA725007828DF /* Stemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8283AF5252FA725007828DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8283AF7252FA725007828DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8283AF9252FA726007828DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8283AFC252FA726007828DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8283AFF252FA726007828DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8283B01252FA726007828DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8283B02252FA726007828DF /* Stemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stemo.entitlements; sourceTree = "<group>"; };
+		D8283B07252FA726007828DF /* StemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8283B0B252FA726007828DF /* StemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemoTests.swift; sourceTree = "<group>"; };
+		D8283B0D252FA726007828DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8283B12252FA726007828DF /* StemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8283B16252FA726007828DF /* StemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemoUITests.swift; sourceTree = "<group>"; };
+		D8283B18252FA727007828DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8283AEF252FA725007828DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8283B04252FA726007828DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8283B0F252FA726007828DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8283AE9252FA725007828DF = {
+			isa = PBXGroup;
+			children = (
+				D8283AF4252FA725007828DF /* Stemo */,
+				D8283B0A252FA726007828DF /* StemoTests */,
+				D8283B15252FA726007828DF /* StemoUITests */,
+				D8283AF3252FA725007828DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8283AF3252FA725007828DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8283AF2252FA725007828DF /* Stemo.app */,
+				D8283B07252FA726007828DF /* StemoTests.xctest */,
+				D8283B12252FA726007828DF /* StemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8283AF4252FA725007828DF /* Stemo */ = {
+			isa = PBXGroup;
+			children = (
+				D8283AF5252FA725007828DF /* AppDelegate.swift */,
+				D8283AF7252FA725007828DF /* ContentView.swift */,
+				D8283AF9252FA726007828DF /* Assets.xcassets */,
+				D8283AFE252FA726007828DF /* Main.storyboard */,
+				D8283B01252FA726007828DF /* Info.plist */,
+				D8283B02252FA726007828DF /* Stemo.entitlements */,
+				D8283AFB252FA726007828DF /* Preview Content */,
+			);
+			path = Stemo;
+			sourceTree = "<group>";
+		};
+		D8283AFB252FA726007828DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D8283AFC252FA726007828DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D8283B0A252FA726007828DF /* StemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8283B0B252FA726007828DF /* StemoTests.swift */,
+				D8283B0D252FA726007828DF /* Info.plist */,
+			);
+			path = StemoTests;
+			sourceTree = "<group>";
+		};
+		D8283B15252FA726007828DF /* StemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8283B16252FA726007828DF /* StemoUITests.swift */,
+				D8283B18252FA727007828DF /* Info.plist */,
+			);
+			path = StemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8283AF1252FA725007828DF /* Stemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8283B1B252FA727007828DF /* Build configuration list for PBXNativeTarget "Stemo" */;
+			buildPhases = (
+				D8283AEE252FA725007828DF /* Sources */,
+				D8283AEF252FA725007828DF /* Frameworks */,
+				D8283AF0252FA725007828DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stemo;
+			productName = Stemo;
+			productReference = D8283AF2252FA725007828DF /* Stemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8283B06252FA726007828DF /* StemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8283B1E252FA727007828DF /* Build configuration list for PBXNativeTarget "StemoTests" */;
+			buildPhases = (
+				D8283B03252FA726007828DF /* Sources */,
+				D8283B04252FA726007828DF /* Frameworks */,
+				D8283B05252FA726007828DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8283B09252FA726007828DF /* PBXTargetDependency */,
+			);
+			name = StemoTests;
+			productName = StemoTests;
+			productReference = D8283B07252FA726007828DF /* StemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8283B11252FA726007828DF /* StemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8283B21252FA727007828DF /* Build configuration list for PBXNativeTarget "StemoUITests" */;
+			buildPhases = (
+				D8283B0E252FA726007828DF /* Sources */,
+				D8283B0F252FA726007828DF /* Frameworks */,
+				D8283B10252FA726007828DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8283B14252FA726007828DF /* PBXTargetDependency */,
+			);
+			name = StemoUITests;
+			productName = StemoUITests;
+			productReference = D8283B12252FA726007828DF /* StemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8283AEA252FA725007828DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Brett Henderson";
+				TargetAttributes = {
+					D8283AF1252FA725007828DF = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					D8283B06252FA726007828DF = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D8283AF1252FA725007828DF;
+					};
+					D8283B11252FA726007828DF = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D8283AF1252FA725007828DF;
+					};
+				};
+			};
+			buildConfigurationList = D8283AED252FA725007828DF /* Build configuration list for PBXProject "Stemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8283AE9252FA725007828DF;
+			productRefGroup = D8283AF3252FA725007828DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8283AF1252FA725007828DF /* Stemo */,
+				D8283B06252FA726007828DF /* StemoTests */,
+				D8283B11252FA726007828DF /* StemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8283AF0252FA725007828DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8283B00252FA726007828DF /* Main.storyboard in Resources */,
+				D8283AFD252FA726007828DF /* Preview Assets.xcassets in Resources */,
+				D8283AFA252FA726007828DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8283B05252FA726007828DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8283B10252FA726007828DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8283AEE252FA725007828DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8283AF8252FA725007828DF /* ContentView.swift in Sources */,
+				D8283AF6252FA725007828DF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8283B03252FA726007828DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8283B0C252FA726007828DF /* StemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8283B0E252FA726007828DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8283B17252FA726007828DF /* StemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8283B09252FA726007828DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8283AF1252FA725007828DF /* Stemo */;
+			targetProxy = D8283B08252FA726007828DF /* PBXContainerItemProxy */;
+		};
+		D8283B14252FA726007828DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8283AF1252FA725007828DF /* Stemo */;
+			targetProxy = D8283B13252FA726007828DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8283AFE252FA726007828DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8283AFF252FA726007828DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8283B19252FA727007828DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8283B1A252FA727007828DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D8283B1C252FA727007828DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Stemo/Stemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Stemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 94XUGF9CU7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Stemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bretth18.Stemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D8283B1D252FA727007828DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Stemo/Stemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Stemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 94XUGF9CU7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Stemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bretth18.Stemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D8283B1F252FA727007828DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 94XUGF9CU7;
+				INFOPLIST_FILE = StemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bretth18.StemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stemo.app/Contents/MacOS/Stemo";
+			};
+			name = Debug;
+		};
+		D8283B20252FA727007828DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 94XUGF9CU7;
+				INFOPLIST_FILE = StemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bretth18.StemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stemo.app/Contents/MacOS/Stemo";
+			};
+			name = Release;
+		};
+		D8283B22252FA727007828DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 94XUGF9CU7;
+				INFOPLIST_FILE = StemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bretth18.StemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Stemo;
+			};
+			name = Debug;
+		};
+		D8283B23252FA727007828DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 94XUGF9CU7;
+				INFOPLIST_FILE = StemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bretth18.StemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Stemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8283AED252FA725007828DF /* Build configuration list for PBXProject "Stemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8283B19252FA727007828DF /* Debug */,
+				D8283B1A252FA727007828DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8283B1B252FA727007828DF /* Build configuration list for PBXNativeTarget "Stemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8283B1C252FA727007828DF /* Debug */,
+				D8283B1D252FA727007828DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8283B1E252FA727007828DF /* Build configuration list for PBXNativeTarget "StemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8283B1F252FA727007828DF /* Debug */,
+				D8283B20252FA727007828DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8283B21252FA727007828DF /* Build configuration list for PBXNativeTarget "StemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8283B22252FA727007828DF /* Debug */,
+				D8283B23252FA727007828DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8283AEA252FA725007828DF /* Project object */;
+}
