@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftUI
+import PythonKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -28,6 +29,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        
+        // Python test
+        
+//        let sys = Python.import("sys")
+//        
+//    sys.path.append("/Users/bretthenderson/Developer/Stemo/Stemo/PythonLib/")
+//        
+//        let example = Python.import("spleet")
+//        
+//        example.hello()
+        
+        
+        let spleet = SpleeterWrapper()
+        
+        spleet.twoStems(input: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/SF.mp3", outputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/Output/")
+        
+        
+//        var spleeter: PythonObject? = nil
+//        
+//        spleeter = try? Python.attemptImport("spleeter")
+//        
+//        print(spleeter)
+        
+//        example.twoStems("/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/SF.mp3", "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/Output/")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

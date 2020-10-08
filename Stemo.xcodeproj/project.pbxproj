@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		D8283B00252FA726007828DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8283AFE252FA726007828DF /* Main.storyboard */; };
 		D8283B0C252FA726007828DF /* StemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B0B252FA726007828DF /* StemoTests.swift */; };
 		D8283B17252FA726007828DF /* StemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B16252FA726007828DF /* StemoUITests.swift */; };
+		D8283B26252FA772007828DF /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8283B25252FA772007828DF /* PythonKit */; };
+		D8283B28252FAEFF007828DF /* spleet.py in Resources */ = {isa = PBXBuildFile; fileRef = D8283B27252FAEFF007828DF /* spleet.py */; };
+		D8283B2D252FBA4E007828DF /* SpleeterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */; };
+		D8283B30252FBD4D007828DF /* spleeter in Resources */ = {isa = PBXBuildFile; fileRef = D8283B2F252FBD4D007828DF /* spleeter */; };
+		D8283B31252FCD1E007828DF /* SF.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8283B33252FCD1E007828DF /* SF.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,10 @@
 		D8283B12252FA726007828DF /* StemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8283B16252FA726007828DF /* StemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemoUITests.swift; sourceTree = "<group>"; };
 		D8283B18252FA727007828DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8283B27252FAEFF007828DF /* spleet.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = spleet.py; sourceTree = "<group>"; };
+		D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpleeterWrapper.swift; sourceTree = "<group>"; };
+		D8283B2F252FBD4D007828DF /* spleeter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spleeter; sourceTree = "<group>"; };
+		D8283B32252FCD1E007828DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/SF.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8283B26252FA772007828DF /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +108,8 @@
 		D8283AF4252FA725007828DF /* Stemo */ = {
 			isa = PBXGroup;
 			children = (
+				D8283B2E252FBC94007828DF /* PythonLib */,
+				D8283B29252FB3BB007828DF /* TestAudio */,
 				D8283AF5252FA725007828DF /* AppDelegate.swift */,
 				D8283AF7252FA725007828DF /* ContentView.swift */,
 				D8283AF9252FA726007828DF /* Assets.xcassets */,
@@ -105,6 +117,7 @@
 				D8283B01252FA726007828DF /* Info.plist */,
 				D8283B02252FA726007828DF /* Stemo.entitlements */,
 				D8283AFB252FA726007828DF /* Preview Content */,
+				D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */,
 			);
 			path = Stemo;
 			sourceTree = "<group>";
@@ -135,6 +148,23 @@
 			path = StemoUITests;
 			sourceTree = "<group>";
 		};
+		D8283B29252FB3BB007828DF /* TestAudio */ = {
+			isa = PBXGroup;
+			children = (
+				D8283B33252FCD1E007828DF /* SF.mp3 */,
+			);
+			path = TestAudio;
+			sourceTree = "<group>";
+		};
+		D8283B2E252FBC94007828DF /* PythonLib */ = {
+			isa = PBXGroup;
+			children = (
+				D8283B2F252FBD4D007828DF /* spleeter */,
+				D8283B27252FAEFF007828DF /* spleet.py */,
+			);
+			path = PythonLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +181,9 @@
 			dependencies = (
 			);
 			name = Stemo;
+			packageProductDependencies = (
+				D8283B25252FA772007828DF /* PythonKit */,
+			);
 			productName = Stemo;
 			productReference = D8283AF2252FA725007828DF /* Stemo.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +256,9 @@
 				Base,
 			);
 			mainGroup = D8283AE9252FA725007828DF;
+			packageReferences = (
+				D8283B24252FA772007828DF /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = D8283AF3252FA725007828DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,8 +275,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8283B30252FBD4D007828DF /* spleeter in Resources */,
 				D8283B00252FA726007828DF /* Main.storyboard in Resources */,
+				D8283B28252FAEFF007828DF /* spleet.py in Resources */,
 				D8283AFD252FA726007828DF /* Preview Assets.xcassets in Resources */,
+				D8283B31252FCD1E007828DF /* SF.mp3 in Resources */,
 				D8283AFA252FA726007828DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8283AF8252FA725007828DF /* ContentView.swift in Sources */,
+				D8283B2D252FBA4E007828DF /* SpleeterWrapper.swift in Sources */,
 				D8283AF6252FA725007828DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +349,15 @@
 				D8283AFF252FA726007828DF /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8283B33252FCD1E007828DF /* SF.mp3 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8283B32252FCD1E007828DF /* Base */,
+			);
+			name = SF.mp3;
+			path = ../../../../Downloads;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -597,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8283B24252FA772007828DF /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8283B25252FA772007828DF /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8283B24252FA772007828DF /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D8283AEA252FA725007828DF /* Project object */;
 }
