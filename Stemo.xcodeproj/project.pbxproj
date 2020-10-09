@@ -14,11 +14,11 @@
 		D8283B00252FA726007828DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8283AFE252FA726007828DF /* Main.storyboard */; };
 		D8283B0C252FA726007828DF /* StemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B0B252FA726007828DF /* StemoTests.swift */; };
 		D8283B17252FA726007828DF /* StemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B16252FA726007828DF /* StemoUITests.swift */; };
-		D8283B26252FA772007828DF /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8283B25252FA772007828DF /* PythonKit */; };
 		D8283B28252FAEFF007828DF /* spleet.py in Resources */ = {isa = PBXBuildFile; fileRef = D8283B27252FAEFF007828DF /* spleet.py */; };
 		D8283B2D252FBA4E007828DF /* SpleeterWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */; };
 		D8283B30252FBD4D007828DF /* spleeter in Resources */ = {isa = PBXBuildFile; fileRef = D8283B2F252FBD4D007828DF /* spleeter */; };
 		D8283B31252FCD1E007828DF /* SF.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8283B33252FCD1E007828DF /* SF.mp3 */; };
+		D8283B36252FE91C007828DF /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8283B35252FE91C007828DF /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8283B26252FA772007828DF /* PythonKit in Frameworks */,
+				D8283B36252FE91C007828DF /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +182,7 @@
 			);
 			name = Stemo;
 			packageProductDependencies = (
-				D8283B25252FA772007828DF /* PythonKit */,
+				D8283B35252FE91C007828DF /* PythonKit */,
 			);
 			productName = Stemo;
 			productReference = D8283AF2252FA725007828DF /* Stemo.app */;
@@ -257,7 +257,7 @@
 			);
 			mainGroup = D8283AE9252FA725007828DF;
 			packageReferences = (
-				D8283B24252FA772007828DF /* XCRemoteSwiftPackageReference "PythonKit" */,
+				D8283B34252FE91C007828DF /* XCRemoteSwiftPackageReference "PythonKit" */,
 			);
 			productRefGroup = D8283AF3252FA725007828DF /* Products */;
 			projectDirPath = "";
@@ -648,7 +648,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D8283B24252FA772007828DF /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+		D8283B34252FE91C007828DF /* XCRemoteSwiftPackageReference "PythonKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pvieito/PythonKit";
 			requirement = {
@@ -659,9 +659,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D8283B25252FA772007828DF /* PythonKit */ = {
+		D8283B35252FE91C007828DF /* PythonKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D8283B24252FA772007828DF /* XCRemoteSwiftPackageReference "PythonKit" */;
+			package = D8283B34252FE91C007828DF /* XCRemoteSwiftPackageReference "PythonKit" */;
 			productName = PythonKit;
 		};
 /* End XCSwiftPackageProductDependency section */

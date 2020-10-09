@@ -8,20 +8,34 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    
     var body: some View {
         VStack {
             Text("Hello, World!")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             VStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: callSplit) {
                     Text(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/)
                 }
             }
 
         }
     }
+    
+ 
+    func callSplit() {
+        
+        let spleet = SpleeterWrapper()
+        
+        spleet.twoStems(stemAmount: 2,inputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/SF.mp3", outputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/Output/")
+    }
+
 }
+
+
 
 
 struct ContentView_Previews: PreviewProvider {

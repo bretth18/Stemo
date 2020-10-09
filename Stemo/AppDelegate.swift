@@ -14,7 +14,7 @@ import PythonKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
-
+//    var spleet = SpleeterWrapper()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
@@ -41,9 +41,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        example.hello()
         
         
-        let spleet = SpleeterWrapper()
+//        let spleet = SpleeterWrapper()
         
-        spleet.twoStems(input: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/SF.mp3", outputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/Output/")
+//        self.spleet.twoStems(input: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/SF.mp3", outputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/Output/")
         
         
 //        var spleeter: PythonObject? = nil

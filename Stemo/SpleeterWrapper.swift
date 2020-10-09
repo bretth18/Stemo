@@ -13,8 +13,7 @@ class SpleeterWrapper {
     
     static let sharedInstance = SpleeterWrapper()
     
-    var spleeter: PythonObject? = nil
-    var separator: PythonObject? = nil
+    var spleet: PythonObject? = nil
     
     
     
@@ -25,9 +24,10 @@ class SpleeterWrapper {
         print("Imported Python Version: " + sys.version)
             
         sys.path.append("/Users/bretthenderson/Developer/Stemo/Stemo/PythonLib/")
-        spleeter = try? Python.attemptImport("spleeter")
-//        separator = try? Python.attemptImport("spleeter.separator")
-        guard self.spleeter != nil else { return }
+        spleet = try? Python.attemptImport("spleet")
+
+        guard self.spleet != nil else { return }
+        
         
 //        guard self.separator != nil else { return }
         
@@ -35,13 +35,20 @@ class SpleeterWrapper {
         
         
         
+        
+        
     }
     
-    func twoStems(input: String, outputPath: String) {
+    func twoStems(stemAmount: Int, inputPath: String, outputPath: String) {
         
-        let response = self.spleeter?.Separator.separate_to_file(input, outputPath)
-//        let response = self.separator?.separate_to_file(input, outputPath)
+//        let response = self.spleeter?.twoStems(input, outputPath)
+//        let response = self.spleeter?.separate.separate_to_file(input, outputPath)
+//        self.separator = spleet?.initSeparator("2")
+        self.spleet?.sepy(stemAmount, inputPath, outputPath)
 
-        print(response!)
+        print(outputPath)
+        
+        
+        
     }
 }
