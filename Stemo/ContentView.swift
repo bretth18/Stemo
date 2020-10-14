@@ -17,6 +17,7 @@ struct ContentView: View {
     /// State variables for text labels.
     @State var inputFileTextLabel = "please select a file"
     @State var outputDirectoryTextLabel = "no output directory selected"
+    @State var consoleOutput = "console log "
     
     /// State variables for boolean values
     @State var inputFileSelected = false
@@ -60,54 +61,65 @@ struct ContentView: View {
                     .fontWeight(.black)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
+            
+                
 
             #endif
-        
-            Spacer()
             
+            VStack() {
+                Spacer()
+                         
+                         
+                
+                         AnimationView()
+                             .frame(height: 100)
+                             .padding(.bottom, 5.0)
 
-            AnimationView()
-                .frame(height: 100)
-                .padding(.bottom, 5.0)
-
-            Spacer()
-            
-            Button(action: inputFile) {
-                Text("select input file")
+                         Spacer()
+                         
+                         Button(action: inputFile) {
+                             Text("select input file")
+                         }
+                         
+                         // Label that displays current selected file path
+                         Text(inputFileTextLabel)
+                         
+                         
+                         
+                         Button(action: outputFile) {
+                             Text("select output file(s) directory")
+                         }
+                         Text(outputDirectoryTextLabel)
+                         
+                         
+                         HStack(alignment: .center) {
+                             Button(action: {
+                                 self.callSplit(stemCount: 2) }) {
+                                 Text("2 stems")
+                             }
+                             .alert(isPresented: $showAlert, content: {self.alertPopup})
+                             
+                             
+                             Button(action: { self.callSplit(stemCount: 4)}) {
+                                 Text("4 stems")
+                             }
+                             .alert(isPresented: $showAlert, content: {self.alertPopup})
+                             
+                             
+                             Button(action: { self.callSplit(stemCount: 5)}) {
+                                 Text("5 stems")
+                             }
+                             .alert(isPresented: $showAlert, content: {self.alertPopup})
+                         }
+                         
+                         VStack() {
+                             Text(consoleOutput)
+                         }
+                         
+                         
+                         Spacer()
+                         
             }
-            
-            // Label that displays current selected file path
-            Text(inputFileTextLabel)
-            
-            
-            
-            Button(action: outputFile) {
-                Text("select output file(s) directory")
-            }
-            Text(outputDirectoryTextLabel)
-            
-            
-            HStack(alignment: .center) {
-                Button(action: {
-                    self.callSplit(stemCount: 2) }) {
-                    Text("2 stems")
-                }
-                .alert(isPresented: $showAlert, content: {self.alertPopup})
-                
-                
-                Button(action: { self.callSplit(stemCount: 4)}) {
-                    Text("4 stems")
-                }
-                .alert(isPresented: $showAlert, content: {self.alertPopup})
-                
-                
-                Button(action: { self.callSplit(stemCount: 5)}) {
-                    Text("5 stems")
-                }
-                .alert(isPresented: $showAlert, content: {self.alertPopup})
-            }
-
-            Spacer()
             
   
             
@@ -115,6 +127,7 @@ struct ContentView: View {
             
             
         }
+        
         
         
     }
@@ -132,8 +145,14 @@ struct ContentView: View {
             let inputFileDirectory = inputFileTextLabel
             let outputFileDirectory = outputDirectoryTextLabel
             
-            // Call spleeter actions
-            spleet.twoStems(stemAmount: stemCount, inputPath: inputFileDirectory, outputPath: outputFileDirectory)
+            // call spleeter actions
+            self.consoleOutput = spleet.twoStems(stemAmount: stemCount, inputPath: inputFileDirectory, outputPath: outputFileDirectory)
+            
+            
+            
+//            /// NOTE: Temporary workaround to just launch spleeter via bash, proper pythonKit integration needs to be done.
+//            self.consoleOutput = spleet.shell("spleeter separate -i \(inputFileDirectory) -p spleeter:\(stemCount)stems -o \(outputFileDirectory)")
+//
             
         } else if (inputFileSelected == true && outputDirectorySelected == false) {
             
@@ -231,5 +250,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }

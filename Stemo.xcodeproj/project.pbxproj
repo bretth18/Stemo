@@ -23,6 +23,7 @@
 		D8BE617325366A060026D933 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE617225366A060026D933 /* ViewExtensions.swift */; };
 		D8BE6175253671980026D933 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE6174253671980026D933 /* AboutView.swift */; };
 		D8BE61772536720D0026D933 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE61762536720D0026D933 /* BundleExtensions.swift */; };
+		D8BE6179253694860026D933 /* ShellRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE6178253694860026D933 /* ShellRunner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		D8BE617225366A060026D933 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		D8BE6174253671980026D933 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D8BE61762536720D0026D933 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		D8BE6178253694860026D933 /* ShellRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellRunner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				D8283B02252FA726007828DF /* Stemo.entitlements */,
 				D8283AFB252FA726007828DF /* Preview Content */,
 				D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */,
+				D8BE6178253694860026D933 /* ShellRunner.swift */,
 				D8BE617025364EB30026D933 /* AnimationView.swift */,
 				D8BE617225366A060026D933 /* ViewExtensions.swift */,
 				D8BE61762536720D0026D933 /* BundleExtensions.swift */,
@@ -323,6 +326,7 @@
 				D8283B2D252FBA4E007828DF /* SpleeterWrapper.swift in Sources */,
 				D8BE617325366A060026D933 /* ViewExtensions.swift in Sources */,
 				D8BE6175253671980026D933 /* AboutView.swift in Sources */,
+				D8BE6179253694860026D933 /* ShellRunner.swift in Sources */,
 				D8283AF6252FA725007828DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

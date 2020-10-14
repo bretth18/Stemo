@@ -23,8 +23,8 @@ class SpleeterWrapper {
         
         print("Imported Python Version: " + sys.version)
             
-        sys.path.append("/Users/bretthenderson/Developer/Stemo/Stemo/PythonLib/")
-        spleet = try? Python.attemptImport("spleet")
+//        sys.path.append("/Users/bretthenderson/Developer/Stemo/Stemo/PythonLib/")
+        spleet = try? Python.attemptImport("spleeter")
 
         guard self.spleet != nil else { return }
         
@@ -32,22 +32,44 @@ class SpleeterWrapper {
 //        guard self.separator != nil else { return }
         
         
-        
-        
-        
-        
+    
         
     }
     
-    func twoStems(stemAmount: Int, inputPath: String, outputPath: String) {
+    
+    /// NOTE: Implemented because i am still figuring out how to get PythonKit to work with Spleeter
+
+    func shell(_ command: String) -> String {
+        
+        
+        let task = Process()
+        let pipe = Pipe()
+
+        task.standardOutput = pipe
+        task.arguments = ["-c", command]
+        task.launchPath = "/bin/bash"
+        task.launch()
+
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: .utf8)!
+
+        return output
+    }
+
+
+    
+    func twoStems(stemAmount: Int, inputPath: String, outputPath: String) -> String {
         
 //        let response = self.spleeter?.twoStems(input, outputPath)
-//        let response = self.spleeter?.separate.separate_to_file(input, outputPath)
 //        self.separator = spleet?.initSeparator("2")
-        self.spleet?.sepy(stemAmount, inputPath, outputPath)
+
+        let response = self.spleet?.separate.separate_to_file(inputPath, outputPath)
+//        self.separator = spleet?.initSeparator("2")
+//        self.spleet?.sepy(stemAmount, inputPath, outputPath)
 
         print(outputPath)
         
+        return String(response!)!
         
         
     }

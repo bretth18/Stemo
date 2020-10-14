@@ -15,12 +15,20 @@ struct AboutView: View {
     public var buildNumber: String = Bundle.main.buildVersionNumberPretty
     
     var body: some View {
-        HStack {
+        VStack {
+            Text("copyright 2020, brett henderson")
+                .font(.headline)
+                .fontWeight(.bold)
+            Text("COMPUTERDATA-DEV")
+                .font(.subheadline)
+                .fontWeight(.semibold)
             // RELEASE VERSION TEXT
             Text("release: \(releaseNumber)")
+                .font(.footnote)
             
             // BUILD VERSION TEXT
             Text("build: \(buildNumber)")
+                .font(.footnote)
 
         }
     }
