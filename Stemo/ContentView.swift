@@ -12,8 +12,17 @@ import SwiftUI
 struct ContentView: View {
     
     private let pageTitle = "stemo"
+    private let buildInfo = "dev 0.0.1"
     
+    /// State variables for text labels.
     @State var inputFileTextLabel = "please select a file"
+    @State var outputDirectoryTextLabel = "no output directory selected"
+    
+    /// State variables for boolean values
+    @State var inputFileSelected = false
+    @State var outputDirectorySelected = false
+    @State var operationInProgress = false
+    @State var showAlert = false
     
     /// Move the main content to another View property, then modify it to add the navbar title (if needed) before returning it as body. When it's separated this way, conditional compilation can be used.
     
@@ -29,11 +38,21 @@ struct ContentView: View {
     #endif
     
     
+    // Alert popup
+    var alertPopup: Alert {
+        Alert(title: Text("Stinky!"), message: Text("input/output path not selected"),
+                                     dismissButton: .default(Text("Dismiss")))
+    }
+    
+    
+    
+    
     
     public var main: some View {
         
         
         VStack() {
+            
             
             #if os(macOS)
                 Text(pageTitle)
@@ -41,11 +60,16 @@ struct ContentView: View {
                     .fontWeight(.black)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.leading)
+
             #endif
         
-            
             Spacer()
-            Text("This is the view content")
+            
+
+            AnimationView()
+                .frame(height: 100)
+                .padding(.bottom, 5.0)
+
             Spacer()
             
             Button(action: inputFile) {
@@ -56,37 +80,80 @@ struct ContentView: View {
             Text(inputFileTextLabel)
             
             
+            
+            Button(action: outputFile) {
+                Text("select output file(s) directory")
+            }
+            Text(outputDirectoryTextLabel)
+            
+            
             HStack(alignment: .center) {
-                Button(action: {}) {
+                Button(action: {
+                    self.callSplit(stemCount: 2) }) {
                     Text("2 stems")
                 }
+                .alert(isPresented: $showAlert, content: {self.alertPopup})
                 
-                Button(action: {}) {
+                
+                Button(action: { self.callSplit(stemCount: 4)}) {
                     Text("4 stems")
                 }
+                .alert(isPresented: $showAlert, content: {self.alertPopup})
                 
-                Button(action: {}) {
+                
+                Button(action: { self.callSplit(stemCount: 5)}) {
                     Text("5 stems")
                 }
+                .alert(isPresented: $showAlert, content: {self.alertPopup})
             }
 
-            
             Spacer()
+            
+  
+            
+ 
             
             
         }
+        
+        
     }
     
 
     
- 
-    func callSplit() {
+    // function callSplit takes an input parameter for stem count
+    func callSplit(stemCount: Int) {
         
         let spleet = SpleeterWrapper()
         
-        spleet.twoStems(stemAmount: 2,inputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/SF.mp3", outputPath: "/Users/bretthenderson/Developer/Stemo/Stemo/TestAudio/Output/")
+        if (inputFileSelected == true && outputDirectorySelected == true) {
+            
+            // store directory in local val to pass
+            let inputFileDirectory = inputFileTextLabel
+            let outputFileDirectory = outputDirectoryTextLabel
+            
+            // Call spleeter actions
+            spleet.twoStems(stemAmount: stemCount, inputPath: inputFileDirectory, outputPath: outputFileDirectory)
+            
+        } else if (inputFileSelected == true && outputDirectorySelected == false) {
+            
+            // prompt warning pop up
+            self.showAlert = true
+            print("ERR: NO OUTPUT PATH SELECTED")
+            return
+            
+        } else {
+            
+            //prompt
+            self.showAlert = true
+            print("ERR: NO INPUT & OUTPUT PATH SELECTED")
+            return
+        }
+        
+
     }
     
+    //    inputFile() presents a finder view to select an audio file
     func inputFile() {
         let dialog = NSOpenPanel()
         dialog.title = "Select an audio file"
@@ -94,6 +161,8 @@ struct ContentView: View {
         dialog.showsHiddenFiles = false
         dialog.allowsMultipleSelection = false
         dialog.canChooseDirectories = false
+        
+        // Only allow audio file types
         dialog.allowedFileTypes = ["mp3", "wav", "aiff", "aif", "mp4"]
         
         if (dialog.runModal() == NSApplication.ModalResponse.OK) {
@@ -106,8 +175,11 @@ struct ContentView: View {
                 print("file selected: \(path)")
                 // Path ontains the file path (/Users/me/Desktop/Shit.mp3)
                 
-                //Update text label with current path
+                // Update text label with current path
                 self.inputFileTextLabel = path
+                
+                // Update Boolean value
+                self.inputFileSelected = true
             }
         } else {
             // user exited the dialog
@@ -115,6 +187,40 @@ struct ContentView: View {
             return
         }
 
+    }
+    
+    // outputFile presents a finder view to select the output path directory for the rendered stems(s).
+    func outputFile() {
+        
+        let dialog = NSOpenPanel()
+        dialog.title = "Choose an output directory"
+        dialog.showsResizeIndicator = true
+        dialog.showsHiddenFiles = false
+        dialog.canChooseFiles = false
+        dialog.canChooseDirectories = true
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK) {
+            let result = dialog.url
+            
+            if (result != nil) {
+                let path: String = result!.path
+                // path contains the directory path
+
+                print("output directory: \(path)")
+                
+                // update state text label
+                self.outputDirectoryTextLabel = path
+                
+                // update state boolean value
+                self.outputDirectorySelected = true
+            }
+        } else {
+            
+            print("cancelled")
+            //canceled
+            return
+        }
+        
     }
 
 }

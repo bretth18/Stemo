@@ -19,6 +19,10 @@
 		D8283B30252FBD4D007828DF /* spleeter in Resources */ = {isa = PBXBuildFile; fileRef = D8283B2F252FBD4D007828DF /* spleeter */; };
 		D8283B31252FCD1E007828DF /* SF.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8283B33252FCD1E007828DF /* SF.mp3 */; };
 		D8283B36252FE91C007828DF /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8283B35252FE91C007828DF /* PythonKit */; };
+		D8BE617125364EB30026D933 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE617025364EB30026D933 /* AnimationView.swift */; };
+		D8BE617325366A060026D933 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE617225366A060026D933 /* ViewExtensions.swift */; };
+		D8BE6175253671980026D933 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE6174253671980026D933 /* AboutView.swift */; };
+		D8BE61772536720D0026D933 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BE61762536720D0026D933 /* BundleExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpleeterWrapper.swift; sourceTree = "<group>"; };
 		D8283B2F252FBD4D007828DF /* spleeter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = spleeter; sourceTree = "<group>"; };
 		D8283B32252FCD1E007828DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/SF.mp3; sourceTree = "<group>"; };
+		D8BE617025364EB30026D933 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		D8BE617225366A060026D933 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		D8BE6174253671980026D933 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D8BE61762536720D0026D933 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +120,16 @@
 				D8283B29252FB3BB007828DF /* TestAudio */,
 				D8283AF5252FA725007828DF /* AppDelegate.swift */,
 				D8283AF7252FA725007828DF /* ContentView.swift */,
+				D8BE6174253671980026D933 /* AboutView.swift */,
 				D8283AF9252FA726007828DF /* Assets.xcassets */,
 				D8283AFE252FA726007828DF /* Main.storyboard */,
 				D8283B01252FA726007828DF /* Info.plist */,
 				D8283B02252FA726007828DF /* Stemo.entitlements */,
 				D8283AFB252FA726007828DF /* Preview Content */,
 				D8283B2C252FBA4E007828DF /* SpleeterWrapper.swift */,
+				D8BE617025364EB30026D933 /* AnimationView.swift */,
+				D8BE617225366A060026D933 /* ViewExtensions.swift */,
+				D8BE61762536720D0026D933 /* BundleExtensions.swift */,
 			);
 			path = Stemo;
 			sourceTree = "<group>";
@@ -306,7 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8283AF8252FA725007828DF /* ContentView.swift in Sources */,
+				D8BE61772536720D0026D933 /* BundleExtensions.swift in Sources */,
+				D8BE617125364EB30026D933 /* AnimationView.swift in Sources */,
 				D8283B2D252FBA4E007828DF /* SpleeterWrapper.swift in Sources */,
+				D8BE617325366A060026D933 /* ViewExtensions.swift in Sources */,
+				D8BE6175253671980026D933 /* AboutView.swift in Sources */,
 				D8283AF6252FA725007828DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
